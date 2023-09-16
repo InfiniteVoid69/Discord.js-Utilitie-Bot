@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@discordjs/core": "^0.6.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "git": "^0.1.5"
+  },
+  "name": "discord.js-bot",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "keywords": [],
+  "author": ".infinitevoid.",
+  "license": "ISC",
+  "description": ""
+}
