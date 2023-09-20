@@ -2,8 +2,8 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("shutdown")
-    .setDescription("Shutsdown the bot"),
+    .setName("generate")
+    .setDescription("Generates an image with the users information"),
   async execute(interaction, client) {
     const embed = new EmbedBuilder()
       .setColor('Red')
@@ -12,11 +12,8 @@ module.exports = {
       .setFooter({
         text: `Requested By: ${interaction.user.username}`
       })
-    console.log('\x1b[41m%s\x1b[0m', `${interaction.user.username} - (${interaction.user.id}) has shutdown the bot`);
     await interaction.reply({
       embeds: [embed], ephemeral: true
     });
-    console.log('\x1b[41m%s\x1b[0m', `${client.user.username} has been shutdown`);
-    process.exit();
   },
 };
