@@ -21,7 +21,7 @@ module.exports = {
           value: moment(target.joinedAt).format('LLLL'),
           inline: true
         },
-        {
+        { 
           name: 'Discord Join Date',
           value: moment(target.user.createdAt).format('LLLL'),
           inline: true
