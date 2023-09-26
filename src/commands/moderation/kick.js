@@ -26,7 +26,7 @@ module.exports = {
       .catch(console.error);
     let reason = interaction.options.getString("reason");
     if (!reason) reason = "Reason not provided";
-    if (!member) return await interaction.reply({content: 'Error 404: User Not Found', ephemeral: true,});
+    if (!member) return await interaction.reply({content: 'Error 404: User Not Found In Guild', ephemeral: true,});
     
     const embed = new EmbedBuilder()
       .setColor("Red")
