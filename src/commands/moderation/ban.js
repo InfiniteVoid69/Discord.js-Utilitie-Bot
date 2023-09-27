@@ -70,7 +70,7 @@ module.exports = {
       .catch(() => {
         console.log(`User - ${target?.user?.username} (${target?.id}) has DMs disabled`)
       });
-    await interaction.guild.bans.create(target.id).catch(console.error);
+    await interaction.guild.bans.create(target.id).reason(reason).catch(console.error);
     await interaction.reply({
       content: `${target.username} (${target.id}) has been banned succesfully`,
     });
