@@ -23,7 +23,7 @@ module.exports = {
 
     async execute(interaction) {
         const target = interaction.options.getUser('target');
-        if (target.id === interaction.user.id)
+        if (target?.id === interaction?.user?.id)
         return await interaction.reply({
         content: `Error 405: You cannot timeout yourself`, ephemeral: true,
         });

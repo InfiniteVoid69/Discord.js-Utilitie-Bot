@@ -19,7 +19,7 @@ for (const folder of functionFolders) {
 
 client.EventsHandler();
 client.CommandHandler();
-client.login(TOKEN);
+client.login(TOKEN2);
 (async () => {
   await connect(DBToken).catch(console.error);
 })();
