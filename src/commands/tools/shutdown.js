@@ -5,6 +5,10 @@ module.exports = {
     .setName("shutdown")
     .setDescription("Shutsdown the bot"),
   async execute(interaction, client) {
+    if (interaction.user.id != '690634329591906316')
+      return await interaction.reply({
+        content: `Error 403: You cannot use this command`, ephemeral: true,
+      });
     const embed = new EmbedBuilder()
       .setColor('Red')
       .setTitle(`Bot Shutting Down`)
