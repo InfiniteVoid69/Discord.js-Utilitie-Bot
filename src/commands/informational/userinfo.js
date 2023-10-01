@@ -17,18 +17,14 @@ module.exports = {
       .setDescription(`${target?.id}`)
       .addFields([
         {
-          name: 'Server Join Date',
-          value: moment(target.joinedAt).format('LLLL'),
+          name: 'User mention',
+          value: `<@${target.id}>`,
           inline: true
         },
         { 
           name: 'Discord Join Date',
-          value: moment(target.user.createdAt).format('LLLL'),
+          value: moment(target.user.createdTimestamp).format('LLLL'),
           inline: true
-        },
-        {
-          name: 'Online Status',
-          value: `${target.presence.statue}`
         }
       ])
       .setTimestamp(Date.now())
